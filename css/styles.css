@@ -1,0 +1,73 @@
+/* start page */
+.start-container {
+  margin-top: 109px;
+  text-align: center;
+}
+
+h1,
+h3 {
+  font-family: "Irish Grover", cursive;
+}
+
+h1 {
+  color: #ea1152;
+  margin: 19px 0 31px;
+  font-size: 36px;
+  letter-spacing: 0.085em;
+}
+
+.start-container h3,
+p {
+  color: white;
+  font-size: 14px;
+}
+
+.start-container p:first-of-type {
+  margin: 0 0 19px;
+}
+
+.start-container p:last-of-type {
+  margin-top: 16px;
+}
+
+.start-btn {
+  width: 218px;
+  height: 42px;
+  background-color: #ea1152;
+  border-radius: 4px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-btn h3 {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+/* genre select page */
+
+.genre-select-container {
+  margin: 0 15px;
+}
+
+.select-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 54px;
+}
+
+.skip-btn {
+  margin: 0;
+  font-size: 16px;
+}
+
+h2 {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 15px;
+}
