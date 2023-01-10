@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Project</title>
   <link rel="icon" href="images/favicon.ico">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -133,6 +138,34 @@
         </ul>
       </div>
     </div>
+    <div class="nav-container">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa-sharp fa-solid fa-house fa-xl"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+            <span>Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-star fa-xl"></i>
+            <span>My Rate</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-bookmark fa-xl"></i>
+            <span>My List</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <div class="home-container">
       <div class="banner-section">
@@ -140,27 +173,30 @@
           <img class="banner-img" src="images/genre/action poster.jpg" alt="banner">
         </div>
         <div class="banner-menu">
-          <div class="row">
+          <div class="row-one">
             <div class="column-half">
-              <img src="images/edit-icon.png" alt="edit">
-              <p class="edit-btn">Edit genre</p>
+              <div class="edit-btn">
+                <img src="images/edit-icon.png" alt="edit">
+                <p>Edit genre</p>
+              </div>
             </div>
             <div class="column-half">
               <p class="view-all">View all</p>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row-two">
             <ul class="genre-tag">
+              <li class="genre-tag-inner">Action</li>
+              <li class="genre-tag-inner">Action</li>
               <li class="genre-tag-inner">Action</li>
               <li class="genre-tag-inner">Action</li>
             </ul>
           </div>
         </div>
       </div>
-
       <div class="movie-section">
-        <div class="row">
+        <div class="row-one">
           <div class="column-full">
             <h4>Top 100 Movies</h4>
             <p class="view-all">View all</p>
@@ -169,8 +205,18 @@
             <ul class="movie-list">
               <li><img src="images/genre/adventure poster.jpg"></li>
               <li><img src="images/genre/adventure poster.jpg"></li>
+          </div>
+        </div>
+
+        <div class="row-one">
+          <div class="column-full">
+            <h4>Action</h4>
+            <p class="view-all">View all</p>
+          </div>
+          <div class="column-full">
+            <ul class="movie-list">
               <li><img src="images/genre/adventure poster.jpg"></li>
-            </ul>
+              <li><img src="images/genre/adventure poster.jpg"></li>
           </div>
         </div>
 
