@@ -28,6 +28,7 @@ p {
 
 .start-container p:last-of-type {
   margin-top: 16px;
+  display: inline-block;
 }
 
 .start-btn {
@@ -167,14 +168,14 @@ h2 {
   cursor: pointer;
 }
 
-.genre-option .genre-list li p {
+.genre-title {
   font-size: 18px;
   font-weight: 500;
   position: absolute;
   color: white;
 }
 
-.genre-option .genre-list li p .checked {
+.selected {
   color: #ea1152;
 }
 
@@ -189,6 +190,7 @@ h2 {
 .home-container .banner-section {
   width: 390px;
   height: 545px;
+  position: relative;
 }
 
 .home-container .banner-img-box {
@@ -287,4 +289,5 @@ h4 {
 .movie-section .row-one .column-full:last-child {
   background-color: yellow;
   overflow-x: auto;
+  white-space: nowrap;
 }
