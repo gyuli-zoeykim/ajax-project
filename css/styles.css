@@ -209,6 +209,7 @@ h2 {
 }
 
 .home-container .banner-menu {
+  width: 100%;
   position: absolute;
   top: 45px;
 }
