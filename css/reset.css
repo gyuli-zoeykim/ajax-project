@@ -8,6 +8,11 @@ body {
   font-family: Poppins, sans-serif;
 }
 
+.home-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 .hidden {
   display: none !important;
 }
