@@ -1,0 +1,292 @@
+/* start page */
+.start-container {
+  margin-top: 109px;
+  text-align: center;
+}
+
+h1,
+h3 {
+  font-family: "Irish Grover", cursive;
+}
+
+h1 {
+  color: #ea1152;
+  margin: 19px 0 31px;
+  font-size: 36px;
+  letter-spacing: 0.085em;
+}
+
+.start-container h3,
+p {
+  color: white;
+  font-size: 14px;
+}
+
+.start-container p:first-of-type {
+  margin: 0 0 19px;
+}
+
+.start-container p:last-of-type {
+  margin-top: 16px;
+  display: inline-block;
+}
+
+.start-btn {
+  width: 218px;
+  height: 42px;
+  background-color: #ea1152;
+  border-radius: 4px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-btn h3 {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+/* nav-container */
+
+.nav-container {
+  position: fixed;
+  bottom: 0;
+  background-color: #1b1a1a;
+  width: 100%;
+  border-top: 0.5px solid white;
+}
+
+.nav-list {
+  width: 390px;
+  height: 52px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.nav-item {
+  height: 100%;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  justify-content: center;
+  text-decoration: none;
+  flex-grow: 1;
+  height: 100%;
+  min-width: 50px;
+}
+
+.nav-link i {
+  padding-top: 18px;
+  color: #6f6f6f;
+}
+
+.nav-link span {
+  font-size: 10px;
+  margin-top: 10px;
+  color: #6f6f6f;
+}
+
+/* genre select page */
+
+.genre-select-container {
+  margin: 0 15px;
+}
+
+.select-option {
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 54px;
+  margin: 0 auto;
+}
+
+.skip-btn {
+  margin: 0;
+  font-size: 16px;
+}
+
+h2 {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 23px;
+}
+
+.genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.genre-list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.genre-list li img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.genre-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 5px;
+  background-color: #1b1a1a;
+  opacity: 60%;
+}
+
+.genre-list input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  appearance: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.genre-title {
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  color: white;
+}
+
+/* home page */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.home-container .banner-section {
+  max-width: 1024px;
+  position: relative;
+}
+
+.home-container .movie-section {
+  max-width: 1024px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-container .banner-img {
+  width: 100%;
+}
+
+.home-container .banner-menu {
+  width: 100%;
+  position: absolute;
+  top: 45px;
+}
+
+.movie-section .row-one {
+  width: 100%;
+}
+
+.home-container .banner-menu .row-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15px;
+  position: relative;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+}
+
+.column-half .edit-btn img {
+  margin-right: 7px;
+}
+
+.row-one .column-half .edit-btn p,
+.view-all {
+  margin: 0;
+}
+
+.home-container .banner-menu .row-two .genre-tag {
+  padding: 0;
+  margin: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genre-tag-inner {
+  font-size: 14px;
+  background-color: #575757;
+  opacity: 70%;
+  border-radius: 50px;
+  display: inline;
+  margin: 8px 11px 0 0;
+  padding: 7px 14px;
+  color: white;
+}
+
+.movie-section-content .movie-list li img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.movie-section .row-one .movie-section-title {
+  min-width: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 15px 9px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+
+.movie-list {
+  max-width: 375px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0;
+  margin: 0 0 0 15px;
+}
+
+.movie-list li {
+  width: 94.5px;
+  margin-right: 10px;
+  flex: 0 0 auto;
+}
+
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
+
+.selected {
+  color: #ea1152;
+}

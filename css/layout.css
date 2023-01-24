@@ -1,0 +1,19 @@
+@media screen and (min-width: 360px) {
+  .genre-list {
+    width: 360px;
+  }
+
+  .genre-list li {
+    flex-basis: 112px;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .genre-list {
+    width: 849px;
+  }
+
+  .genre-list li {
+    flex-basis: 154px;
+  }
+}

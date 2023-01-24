@@ -4,4 +4,19 @@
 
 body {
   margin: 0;
+  background-color: #1b1a1a;
+  font-family: Poppins, sans-serif;
+}
+
+.home-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+li {
+  list-style: none;
 }

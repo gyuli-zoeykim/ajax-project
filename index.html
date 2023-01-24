@@ -5,14 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Project</title>
   <link rel="icon" href="images/favicon.ico">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
   </header>
   <main>
+    <div class="start-container">
+      <img class="popcorn" src="images/popcorn.png" alt="popcorn">
+      <h1>MOVIE NIGHT</h1>
+      <p>Looking for what to watch tonight&#63;</p>
+      <div class="start-btn">
+        <h3>Start Now</h3>
+      </div>
+      <p class="profile-btn">I Already have a profile</p>
+    </div>
+
+    <div class="genre-select-container hidden">
+      <div class="select-option">
+        <img class="previous-btn" src="images/previous-icon.png" alt="previous">
+        <p class="skip-btn">Skip for now</p>
+        <input type="image" class="check-btn" src="images/check-icon.png" alt="submit">
+      </div>
+
+      <h2>Let's select preferred genre</h2>
+
+      <ul class="genre-list">
+        <li>
+          <img src="images/genre/action poster.jpg" alt="action">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-action">
+          <p class="genre-title">Action</p>
+        </li>
+        <li>
+          <img src="images/genre/adventure poster.jpg" alt="adventure">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-adventure">
+          <p class="genre-title">Adventure</p>
+        </li>
+        <li>
+          <img src="images/genre/animation poster.jpg" alt="animation">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-animation">
+          <p class="genre-title">Animation</p>
+        </li>
+        <li>
+          <img src="images/genre/comedy poster.jpg" alt="comedy">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-comedy">
+          <p class="genre-title">Comedy</p>
+        </li>
+        <li>
+          <img src="images/genre/crime poster.jpg" alt="crime">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-crime">
+          <p class="genre-title">Crime</p>
+        </li>
+        <li>
+          <img src="images/genre/drama poster.jpg" alt="drama">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-drama">
+          <p class="genre-title">Drama</p>
+        </li>
+        <li>
+          <img src="images/genre/family poster.jpg" alt="family">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-family">
+          <p class="genre-title">Family</p>
+        </li>
+        <li>
+          <img src="images/genre/fantasy poster.jpg" alt="fantasy">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-fantasy">
+          <p class="genre-title">Fantasy</p>
+        </li>
+        <li>
+          <img src="images/genre/horror poster.jpg" alt="horror">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-horror">
+          <p class="genre-title">Horror</p>
+        </li>
+        <li>
+          <img src="images/genre/musical poster.jpg" alt="musical">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-musical">
+          <p class="genre-title">Musical</p>
+        </li>
+        <li>
+          <img src="images/genre/mystery poster.jpg" alt="mystery">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-mystery">
+          <p class="genre-title">Mystery</p>
+        </li>
+        <li>
+          <img src="images/genre/romance poster.jpg" alt="romance">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-romance">
+          <p class="genre-title">Romance</p>
+        </li>
+        <li>
+          <img src="images/genre/sci-fi poster.jpg" alt="sci-fi">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-sci-fi">
+          <p class="genre-title">Sci-Fi</p>
+        </li>
+        <li>
+          <img src="images/genre/thriller poster.jpg" alt="thriller">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-thriller">
+          <p class="genre-title">Thriller</p>
+        </li>
+        <li>
+          <img src="images/genre/war poster.jpg" alt="war">
+          <div class="genre-overlay"></div>
+          <input type="checkbox" id="genre-war">
+          <p class="genre-title">War</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-container hidden">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa-sharp fa-solid fa-house fa-xl"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+            <span>Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-star fa-xl"></i>
+            <span>My Rate</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-bookmark fa-xl"></i>
+            <span>My List</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="home-container hidden">
+      <div class="banner-section">
+        <div class="banner-img-box"></div>
+        <div class="banner-menu">
+          <div class="row-one">
+            <div class="column-half">
+              <div class="edit-btn">
+                <img id="genre-tag-img" src="images/edit-icon.png" alt="edit">
+                <p>Edit genre</p>
+              </div>
+            </div>
+            <div class="column-half">
+              <p class="view-all">View all</p>
+            </div>
+          </div>
+
+          <div class="row-two">
+            <ul class="genre-tag"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="movie-section"></div>
+    </div>
+
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
