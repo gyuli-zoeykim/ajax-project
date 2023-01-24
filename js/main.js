@@ -12,30 +12,17 @@ var tagListAll = document.getElementsByClassName('genre-tag')[0];
 
 /* pulick API */
 
-/* var apiIndex = [
-  'groups=top_1000&count=250',
-  'groups=top_100&count=100',
-  'genres=action&count=250'
-];
- var request = new XMLHttpRequest();
-var apiArry = [];
-for (let i = 0; i < apiIndex.length; i++) {
-  var url = 'https://imdb-api.com/API/AdvancedSearch/k_b62uzd11?' + apiIndex[i];
-  request.open('GET', url);
-  request.responseType = 'json';
-  request.addEventListener('load', function () {
-    console.log('xhr status:', request.status);
-    console.log('xhr response:', request.response);
-  });
-  apiArry.push(request.response);
-  request.send();
-} */
-
 var request = new XMLHttpRequest();
 
 request.open('GET', 'https://imdb-api.com/API/AdvancedSearch/k_b62uzd11?groups=top_1000&count=250');
 request.responseType = 'json';
 request.send();
+
+var genreRequest = new XMLHttpRequest();
+
+genreRequest.open('GET', 'https://imdb-api.com/API/AdvancedSearch/k_b62uzd11?genres=action&count=250');
+genreRequest.responseType = 'json';
+genreRequest.send();
 
 /* entry toggle */
 function mainEntry() {
@@ -79,10 +66,15 @@ profile.addEventListener('click', function () {
   mainEntry();
   homeEntry();
   navEntry();
+  showGenreList();
   if (data.genreTagEntry.length !== 0) {
     for (let i = 0; i < data.genreTagEntry.length; i++) {
       tagListAll.appendChild(renderGenreTag(data.genreTagEntry[i]));
       tagListAll.firstElementChild.className = 'genre-tag-inner selected';
+      genreTagImg.setAttribute('src', 'images/genre/fantasy poster.jpg');
+      genreTagImgId.setAttribute('data-genreid', data.genreTagEntry[1]);
+      genreTagImgId.appendChild(genreTagImg);
+      genreTagBox.appendChild(genreTagImgId);
     }
   } randomEntry();
 });
@@ -127,6 +119,7 @@ checkBtn.addEventListener('click', function () {
   genreEntry();
   homeEntry();
   navEntry();
+  showGenreList();
   for (let i = 0; i < genreList.length; i++) {
     if (genreTitle[i].getAttribute('class') === 'genre-title selected' &&
     data.genreTagEntry.includes(genreTitle[i].textContent) === false) {
@@ -156,20 +149,63 @@ editTagBtn.addEventListener('click', function () {
   data.genreTagEntry = [];
 });
 
-/* var sectionTitle = document.querySelector('.movie-section-title');
-var sectionContent = document.querySelector('.movie-section-content');
-var sectionHeading = document.createElement('h4');
-sectionHeading.textContent = 'Top 100 Moives';
-var sectionViewAll = document.createElement('p');
-sectionViewAll.setAttribute('class', 'view-all');
-sectionViewAll.textContent = 'View all';
-var sectionListAll = document.createElement('ul');
-var sectionImgList = document.createElement('li');
-var sectionImg = document.createElement('img');
-sectionImg.setAttribute('src', 'images/genre/adventure poster.jpg');
+function renderGenreList(entryvalue) {
+  var movieSectionRow = document.createElement('div');
+  movieSectionRow.setAttribute('class', 'row-one');
+  movieSectionRow.setAttribute('data-genreid', entryvalue);
 
-sectionTitle.appendChild(sectionHeading);
-sectionTitle.appendChild(sectionViewAll);
-sectionImgList.appendChild(sectionImg);
-sectionListAll.append(sectionImgList);
-sectionContent.appendChild(sectionListAll); */
+  var sectionTitle = document.createElement('div');
+  sectionTitle.setAttribute('class', 'movie-section-title');
+
+  var sectionContent = document.createElement('div');
+  sectionContent.setAttribute('class', 'movie-section-content');
+
+  var sectionHeading = document.createElement('h4');
+  sectionHeading.textContent = entryvalue.charAt(0).toUpperCase() + entryvalue.slice(1);
+  var sectionViewAll = document.createElement('p');
+  sectionViewAll.setAttribute('class', 'view-all');
+  sectionViewAll.textContent = 'View all';
+  var sectionListAll = document.createElement('ul');
+  sectionListAll.setAttribute('class', 'movie-list');
+  var sectionImgList = document.createElement('li');
+  var sectionImg = document.createElement('img');
+  for (let i = 0; i < 50; i++) {
+    sectionImg.setAttribute('src', genreRequest.response.results[i].image);
+    sectionImgList.appendChild(sectionImg);
+    sectionListAll.appendChild(sectionImgList);
+  }
+  sectionTitle.appendChild(sectionHeading);
+  sectionTitle.appendChild(sectionViewAll);
+  sectionContent.appendChild(sectionListAll);
+  movieSectionRow.appendChild(sectionTitle);
+  movieSectionRow.appendChild(sectionContent);
+  return movieSectionRow;
+}
+
+var genreArry = [
+  'Top 100 Movies',
+  'action',
+  'adventure',
+  'animation',
+  'comedy',
+  'crime',
+  'drama',
+  'family',
+  'fantasy',
+  'horror',
+  'musical',
+  'mystry',
+  'romance',
+  'sci-fi',
+  'thriller',
+  'war'
+];
+
+var movieSection = document.querySelector('.movie-section');
+
+function showGenreList() {
+  for (let i = 0; i < genreArry.length; i++) {
+    movieSection.appendChild(renderGenreList(genreArry[i]));
+  }
+  return movieSection;
+}
